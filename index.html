@@ -42,10 +42,12 @@
     <div class="header-container">
         <div class="logo">
             <!-- Afina -->
-            <img src="./images/afina_logo.png" alt="nav-log">
+            <a href="">
+                <img src="./images/afina_logo.png" alt="nav-log">
+            </a>
         </div>
         <div class="secure-checkout-container">
-            <img class="lock-icon" src="./images/secure-checkout-icon.png" alt="">
+            <img class="lock-icon" src="./images/secure-checkout-icon.png" alt="lock-icon">
             <span class="secure-checkout">Secure Checkout</span>
         </div>
     </div>
@@ -144,7 +146,7 @@
                                 </div>
                             </div>
 
-                            
+
 
 
                         </div>
@@ -229,47 +231,47 @@
                         <div class="left">
 
                             <div class="title-row-container">
-                            <div class="title-row">
-                                <div class="radio">
-                                    <div class="inner-radio">
+                                <div class="title-row">
+                                    <div class="radio">
+                                        <div class="inner-radio">
 
+                                        </div>
+                                    </div>
+
+                                    <div class="radio-right-cont">
+                                        <div class="title">
+                                            Buy 3 : <span class="highlight">Starter Deal</span>
+                                        </div>
+
+                                        <div class="tag-row">
+                                            <div class="tag orange">SAVE $44.90</div>
+                                            <div class="tag green">FREE SHIPPING</div>
+                                        </div>
+
+                                        <div class="images">
+                                            <div class="shower-img-cont">
+                                                <img src="./images/v2-shower.png" alt="shower-img">
+                                            </div>
+                                            <div class="shower-img-cont">
+                                                <img src="./images/v2-shower.png" alt="shower-img">
+                                            </div>
+                                            <div class="shower-img-cont">
+                                                <img src="./images/v2-shower.png" alt="shower-img">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-
-                                <div class="radio-right-cont">
-                                    <div class="title">
-                                        Buy 3 : <span class="highlight">Starter Deal</span>
+                                <div class="images">
+                                    <div class="shower-img-cont">
+                                        <img src="./images/v2-shower.png" alt="shower-img">
                                     </div>
-
-                                    <div class="tag-row">
-                                        <div class="tag orange">SAVE $44.90</div>
-                                        <div class="tag green">FREE SHIPPING</div>
+                                    <div class="shower-img-cont">
+                                        <img src="./images/v2-shower.png" alt="shower-img">
                                     </div>
-
-                                    <div class="images">
-                                        <div class="shower-img-cont">
-                                            <img src="./images/v2-shower.png" alt="shower-img">
-                                        </div>
-                                        <div class="shower-img-cont">
-                                            <img src="./images/v2-shower.png" alt="shower-img">
-                                        </div>
-                                        <div class="shower-img-cont">
-                                            <img src="./images/v2-shower.png" alt="shower-img">
-                                        </div>
+                                    <div class="shower-img-cont">
+                                        <img src="./images/v2-shower.png" alt="shower-img">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="images">
-                                        <div class="shower-img-cont">
-                                            <img src="./images/v2-shower.png" alt="shower-img">
-                                        </div>
-                                        <div class="shower-img-cont">
-                                            <img src="./images/v2-shower.png" alt="shower-img">
-                                        </div>
-                                        <div class="shower-img-cont">
-                                            <img src="./images/v2-shower.png" alt="shower-img">
-                                        </div>
-                                    </div>
                             </div>
                         </div>
 
@@ -545,8 +547,9 @@
                                 <div class="input-box">
                                     <input type="text" placeholder="Card Number" id="card-number" maxlength="19">
 
-                                    <div class="icon">
-                                        <img src="./images/payment-lock.png" alt="">
+                                    <div class="icon ">
+                                        <img src="./images/payment-lock.png" alt="atm Number">
+
                                     </div>
                                 </div>
 
@@ -560,7 +563,12 @@
                                     <div class="input-box">
                                         <input type="text" placeholder="CVV Code" id="card-cvv" maxlength="4">
 
-                                        <div class="icon"><img src="./images/Layer34.png" alt=""></div>
+                                        <div class="icon tooltip-icon">
+                                            <img src="./images/Layer34.png" alt="">
+                                            <div class="tooltip">
+                                                3-digit code on the back of your card
+                                            </div>
+                                        </div>
                                     </div>
 
                                 </div>
@@ -866,7 +874,7 @@
                                 <h3>Free Shipping Across the USA</h3>
 
                                 <p>
-                                  No minimums. No surprises at checkout.
+                                    No minimums. No surprises at checkout.
                                 </p>
 
                             </div>
@@ -1414,6 +1422,16 @@
 
             updateTimer();
         })();
+
+
+
+        document.querySelectorAll(".tooltip-icon").forEach(icon => {
+
+            icon.addEventListener("click", () => {
+                icon.classList.toggle("show-tooltip");
+            });
+
+        });
     </script>
 </body>
 

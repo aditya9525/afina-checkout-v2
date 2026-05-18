@@ -1294,10 +1294,55 @@
 .icon {
     position: absolute;
     right: 16px;
-    top: 50%;
+    top: 58%;
     transform: translateY(-50%);
     color: #9b9b9b;
     font-size: 20px;
+}
+
+
+.tooltip-icon{
+    /* position: relative; */
+    cursor: pointer;
+}
+
+.tooltip{
+    position: absolute;
+    bottom: 45px;
+    right: 0;
+
+    width: 190px;
+    padding: 10px 14px;
+
+    background: #111;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    border-radius: 10px;
+    font-size: 13px;
+    line-height: 1.4;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+}
+
+.tooltip::after{
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    right: 18px;
+
+    width: 12px;
+    height: 12px;
+
+    background: #111;
+    transform: rotate(45deg);
+}
+
+.tooltip-icon:hover .tooltip{
+    opacity: 1;
+    visibility: visible;
 }
 
 .row {
@@ -3266,7 +3311,7 @@
     }
 
     .icon {
-        transform: translateY(-37%);
+        transform: translateY(-49%);
     }
 
     .row {
